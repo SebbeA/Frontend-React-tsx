@@ -1,0 +1,34 @@
+/** Code copy from Tobias Lundkvist  */
+
+:root {
+    --color-white: #FFFFFF;
+    --color-grey-0: #F5F5F5;
+    --color-grey-0-1: #F8F8F8;
+    --color-grey-1: #E6E6E6;
+    --color-grey-2: #BBBBBB;
+    --color-grey-3: #BEBEBE;
+    --color-grey-4: #616365;
+    --color-light-dark: #222529;
+    --color-dark: #23262A;
+    --color-shadow-dark: rgba(0, 0, 0, 0.6);
+    --color-theme: #FF7373;
+
+    --font-poppins: 'poppins', 'sans-serif';
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    --font-size-13: 13px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-20: 20px;
+    --font-size-45: 45px;
+    --font-size-65: 65px;
+
+    --max-width: 1680px;
+
+}

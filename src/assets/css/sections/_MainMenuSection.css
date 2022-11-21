@@ -1,0 +1,109 @@
+/** CSS for main menu section, copy from Hans, from Frontend assignment */
+
+header {
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
+}
+
+.mainmenu {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo menuicons"
+                         "menulinks menulinks ";
+    margin-bottom: 60px;
+}
+    .mainmenu .logotype {
+        grid-area: logo;
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--color-dark);
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+        .mainmenu .logotype:hover {
+            text-decoration: none;
+            color: var(--color-dark);
+        }
+    .mainmenu .menu-links {
+        grid-area: menulinks;
+        display: none;
+        height: 100%;
+        overflow: hidden;
+        font-weight: 400;
+    }
+        .mainmenu .menu-links .menu-link {
+            color: var(--color-dark);
+            font-weight: 500;
+            text-decoration: none;
+            margin: 15px 15px;
+            transition: 0.3s ease-in-out;
+        }
+            .mainmenu .menu-links .menu-link:hover {
+                text-decoration: none;
+                color: var(--color-theme);
+            }
+    .mainmenu .menu-links .active {
+        color: var(--color-theme);
+        text-decoration: none;
+    }
+
+    .mainmenu .menu-icons {
+        grid-area: menuicons;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+        .mainmenu .menu-icons .menu-icon {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin-left: 15px;
+            margin-right: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px 2px var(--color-shadow-dark);
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+            .mainmenu .menu-icons .menu-icon:hover {
+                background-color: var(--color-dark);
+                color: var(--color-white);
+                box-shadow: 0 0 6px 4px var(--color-shadow-dark);
+            }
+    .mainmenu .menu-icons .active {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        text-decoration: none;
+        box-shadow: 0 0 6px 4px var(--color-shadow-dark);
+    }
+    .mainmenu .menu-icons .btn-menu-icon {
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border: none;
+        outline: none;
+    }
+
+@media (min-width: 1200px) {
+    .mainmenu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo menulinks menuicons";
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+        .mainmenu .menu-links {
+            grid-area: menulinks;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-weight: 500;
+        }
+}

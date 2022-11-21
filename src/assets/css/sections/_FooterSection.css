@@ -1,0 +1,25 @@
+/** from Hans video, Frontend assignment */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--color-grey-0-1);
+}
+    footer .socialmedia {
+        margin-bottom: 25px;
+    }
+        footer .socialmedia a {
+            font-size: 20px;
+            color: var(--color-dark);
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            transition: 0.3s ease-in-out;
+        }
+            footer .socialmedia a:hover {
+                color: var(--color-theme);
+                text-decoration: none;
+            }

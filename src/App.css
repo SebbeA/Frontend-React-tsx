@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
-}
+/** All code from Frontend assignment  */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/** Importing all CSS style here */
+/** Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/** Cores */
+@import "../src/assets/css/cores/_Variables.css";
+@import "../src/assets/css/cores/_Base.css";
+@import "../src/assets/css/cores/_GridCardIcon.css";
+@import "../src/assets/css/cores/_Buttons.css";
+@import "../src/assets/css/cores/_Colors.css";
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/** Sections */
+@import "../src/assets/css/sections/_MainMenuSection.css";
+@import "../src/assets/css/sections/_BreadcrumbSection.css";
+@import "../src/assets/css/sections/_MapSection.css";
+@import "../src/assets/css/sections/_ContactFormSection.css";
+@import "../src/assets/css/sections/_ShowcaseSection.css";
+@import "../src/assets/css/sections/_ProductGridSection.css";
+@import "../src/assets/css/sections/_CollabSection.css";
+@import "../src/assets/css/sections/_TopPickSection.css";
+@import "../src/assets/css/sections/_FlashSaleSection.css";
+@import "../src/assets/css/sections/_InfoSection.css";
+@import "../src/assets/css/sections/_FooterSection.css";

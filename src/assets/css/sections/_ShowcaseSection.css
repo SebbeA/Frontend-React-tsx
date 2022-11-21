@@ -1,0 +1,35 @@
+/** CSS for showcase section, from Frontend assignment */
+
+.showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+    .showcase .img-left {
+        margin-left: -120px;
+    }
+    .showcase .img-right {
+        margin-right: -120px;
+    }
+
+    .showcase .showcase-body {
+        text-align: center;
+    }
+        .showcase .showcase-body h1 {
+            font-size: 65px;
+            font-weight: 800;
+        }
+        .showcase .showcase-body p {
+            margin-top: 50px;
+            margin-bottom: 35px;
+            font-size: 20px;
+        }
+            .showcase .showcase-body .button-theme {
+                background-color: var(--color-theme);
+                color: var(--color-white);
+            }
+                .showcase .showcase-body .button-theme:hover {
+                    background-color: var(--color-dark);
+                    color: var(--color-white);
+                }

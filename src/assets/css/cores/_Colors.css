@@ -1,0 +1,9 @@
+/** Code copy from Hans, From Frontend assignment  */
+
+.bg-theme {
+    background-color: var(--color-theme);
+}
+
+.bg-dark {
+    background-color: var(--color-dark) !important;
+}

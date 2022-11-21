@@ -1,0 +1,39 @@
+/** CSS for one of the 2 FOR USD $29 part, from Frontend assignment */
+
+.top-grid .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 1430px;
+    margin-left: 110px;
+    margin-bottom: 60px;
+}
+
+.top-pick {
+    background-color: var(--color-grey-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 680px;
+    width: 825px;
+    position: relative;
+}
+    .top-pick .top-pick-body {
+        width: 50%;
+        text-align: center;
+    }
+        .top-pick .top-pick-body .top-pick-title {
+            font-size: 45px;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 40px;
+        }
+    .top-pick .top-pick-body .button-theme-white {
+        background-color: var(--color-white);
+        color: black;
+    }
+        .top-pick .top-pick-body .button-theme-white:hover {
+            background-color: var(--color-theme);
+            color: black;
+        }
