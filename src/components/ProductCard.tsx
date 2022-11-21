@@ -4,7 +4,7 @@ import { IProduct } from '../models/ProductModel';
 
 // * Added prop (product)
 const ProductCard: React.FC <IProduct> = ({product}) => {
-    // * Beginning of a function to add products for wishlist, compare and cart. Copy from Hans
+    // * Beginning of a function to add products for wishlist, compare and cart. Copy from Hans in Frontend assignment
     const addToWishList = (e: any) => {
         console.log("added to wish list")
     }
