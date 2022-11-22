@@ -8,4 +8,5 @@ export interface IProduct {
     articleNumber?: string
     rating?: number
     description?: string
+    title?: string
 }
