@@ -1,6 +1,6 @@
 export interface IMenuIcon {
     link: string
     icon: string
-    quantity: number
+    quantity?: number | string
     hideOnMobile?: boolean
 }
