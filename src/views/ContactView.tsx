@@ -21,7 +21,7 @@ const ContactsView: React.FC = () => {
       {/* sets currentPage as Contacts */}
       <BreadcrumbSection currentPage="Contacts" />
       <MapSection />
-      <ContactFormSection name={undefined} email={undefined} comments={undefined} />
+      <ContactFormSection />
       <FooterSection />
     </>
   )

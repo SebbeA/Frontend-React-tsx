@@ -4,7 +4,7 @@ export const textValidation = (elementName: string, value: string, minLength: nu
     else if (value.length < minLength)
         return `${elementName} must contain atleast ${minLength} chars`
     else
-        return 'Perfect!'
+        return ''
 }
 
 export const emailValidation = (elementName: string, value: string, regEx: RegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) => {
@@ -13,5 +13,5 @@ export const emailValidation = (elementName: string, value: string, regEx: RegEx
     else if (!regEx.test(value))
         return `Your ${elementName} must be a valid email adress`
     else
-        return 'Perfect!'
+        return ''
 }
