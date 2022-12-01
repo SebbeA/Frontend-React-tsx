@@ -3,7 +3,7 @@ import React from 'react'
 import MainMenuSection from '../sections/MainMenuSection'
 // * importing footer section
 import FooterSection from '../sections/FooterSection'
-import { TabTitle } from '../Utilis/GeneralFunctions'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 const CategoriesView: React.FC = () => {
   TabTitle('Categories | Fixxo.')

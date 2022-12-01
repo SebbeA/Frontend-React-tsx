@@ -9,7 +9,7 @@ import MapSection from '../sections/MapSection'
 import ContactFormSection from '../sections/ContactFormSection'
 // * importing footer section
 import FooterSection from '../sections/FooterSection'
-import { TabTitle } from '../Utilis/GeneralFunctions'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 const ContactsView: React.FC = () => {
   TabTitle('Contacts | Fixxo.')

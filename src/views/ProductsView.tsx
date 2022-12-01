@@ -7,7 +7,7 @@ import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 // * importing a context here and using it below
 import { ProductContextType, useProductContext } from '../contexts/contexts'
-import { TabTitle } from '../Utilis/GeneralFunctions'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 // * sets and using useContext
 const ProductsView: React.FC = () => {

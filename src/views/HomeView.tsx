@@ -11,7 +11,7 @@ import InfoSection from '../sections/InfoSection'
 import FooterSection from '../sections/FooterSection'
 // * importing 2 contexts and using it below
 import { ProductContextType, useProductContext } from '../contexts/contexts'
-import { TabTitle } from '../Utilis/GeneralFunctions'
+import { TabTitle } from '../utilities/GeneralFunctions'
 
 // * sets and define products and square with useContext
 const HomeView: React.FC = () => {

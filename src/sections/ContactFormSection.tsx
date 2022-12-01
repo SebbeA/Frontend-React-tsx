@@ -7,7 +7,7 @@ import { IError, IProps } from '../models/Validation'
 
 const ContactFormSection: React.FC <IProps> = () => {
     let currentPage = "Contact Us"
-    //! window.top.document.title = `${currentPage} || Fixxo` 
+
     // * sets and defines useState
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
