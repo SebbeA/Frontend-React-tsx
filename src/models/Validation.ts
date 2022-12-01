@@ -11,7 +11,3 @@ export interface IProps {
     e?:any
     validate?: any
 }
-
-export interface IValue {
-    value: any
-}

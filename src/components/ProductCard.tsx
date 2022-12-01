@@ -3,7 +3,12 @@ import { NavLink } from 'react-router-dom';
 import { IProduct } from '../models/ProductModel';
 
 // * Added prop (product)
-const ProductCard: React.FC <IProduct> = ({product}) => {
+
+interface ProductCardType {
+    product: IProduct
+}
+
+const ProductCard: React.FC<ProductCardType> = ({product}) => {
     // * Beginning of a function to add products for wishlist, compare and cart. Copy from Hans in Frontend assignment
     const addToWishList = (e: any) => {
         console.log("added to wish list")

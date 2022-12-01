@@ -1,7 +1,13 @@
 import React from 'react'
 import { IProduct } from '../models/ProductModel'
 // * Copy from Hans
-const ProductDetails: React.FC <IProduct> = ({product}) => {
+
+interface ProductDetailsType {
+  product: IProduct
+}
+
+const ProductDetails: React.FC <ProductDetailsType> = ({product}) => {
+
   return (
     <div>
         <h1>{product.name}</h1>

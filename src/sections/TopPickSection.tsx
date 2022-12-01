@@ -3,10 +3,14 @@ import React from 'react'
 import ProductCard from '../components/ProductCard'
 import { IProduct } from '../models/ProductModel'
 
-// ! Kolla på { articleNumber: React.Key }
+export interface TopPick {
+  title?: string
+  product?: IProduct
+  products: IProduct[]
+}
 
 // *added prop (products) and structure for toppick section
-const TopPickSection: React.FC <IProduct> = ({products = []}) => {
+const TopPickSection: React.FC <TopPick> = ({products = []}) => {
   return (
     <section className="top-grid">
         <div className="container">
@@ -19,7 +23,7 @@ const TopPickSection: React.FC <IProduct> = ({products = []}) => {
           <div className="row row-cols-1 row-cols-md-2">
             {/* importing ProductCard component here */}
               {
-                products.map((product: { articleNumber: React.Key | null | undefined }) => <ProductCard key={product.articleNumber} product={product} />)
+                products.map(product => <ProductCard key={product.articleNumber} product={product} />)
               }
           </div>
         </div>

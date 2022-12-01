@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // * importing productcard component
 import ProductCard from '../components/ProductCard';
 import { IProduct } from '../models/ProductModel';
 
-// ! Kolla på { articleNumber: React.Key }
+export interface FlashSale {
+  title?: string
+  product?: IProduct
+  products: IProduct[]
+}
 
 // * Added prop (products from app.js)
-const FlashSaleSection: React.FC <IProduct> = ({products = []}) => {
+const FlashSaleSection: React.FC <FlashSale> = ({products = []}) => {
+
   return (
     <section className="flash-grid">
         <div className="container">
           <div className="row row-cols-1 row-cols-md-2 g-2">
             {/* importing ProductCard component here */}
               {
-                products.map((product: { articleNumber: React.Key | null | undefined; }) => <ProductCard key={product.articleNumber} product={product} />)
+                products.map(product => <ProductCard key={product.articleNumber} product={product} />)
               }
           </div>
           <div className="flashsale">
@@ -28,3 +33,7 @@ const FlashSaleSection: React.FC <IProduct> = ({products = []}) => {
 }
 
 export default FlashSaleSection
+
+function getFeaturedProducts(arg0: number) {
+  throw new Error('Function not implemented.');
+}
