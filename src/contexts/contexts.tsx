@@ -1,6 +1,6 @@
 // * importing createContext so we can use useContext
 import { createContext, useState, useContext, useEffect } from 'react'
-import { IProduct } from '../models/ProductModel'
+import { IProduct, ProductItem } from '../models/ProductModel'
 
 interface ProductProviderType {
     children: any
@@ -13,7 +13,7 @@ export interface ProductContextType {
     square: IProduct[]
     sets: IProduct[]
     getProduct: (articleNumber?: string) => void
-    getProducts: (take?: number) => void
+    getProducts: () => void
     getFeaturedProducts: (take?: number) => void
     getSquare: (take?: number) => void
     getSets: (take?: number) => void
@@ -23,8 +23,8 @@ export const ProductContext = createContext<ProductContextType | null>(null)
 export const useProductContext = () => { return useContext(ProductContext) }
 
 const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
-    const baseUrl: string = 'https://win22-webapi.azurewebsites.net/api/products'
-    const EmptyProduct: IProduct = { articleNumber: '', name: '', category: '', price: 0, imageName: '' }
+    const baseUrl: string = 'http://localhost:5000/api/products'
+    const EmptyProduct: ProductItem = { articleNumber: '', name: '', description: '', category: '', price: 0, imageName: '', tag: '' }
 
     const [product, setProduct] = useState<IProduct>(EmptyProduct)
     const [products, setProducts] = useState<IProduct[]>([])
@@ -32,48 +32,43 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
     const [square, setSquare] = useState<IProduct[]>([])
     const [sets, setSets] = useState<IProduct[]>([])
 
-    const getProducts = async (take: number = 0) => {
-        let url = baseUrl
+    const getProduct = async (articleNumber?: string) => {
+        if (articleNumber !== undefined) {
+            const res = await fetch(`${baseUrl}/details/${articleNumber}`)
+            setProduct(await res.json())
+        }
+    }
 
-        if (take !== 0)
-            url = baseUrl + `?take=${take}`
-
-        const res = await fetch(url)
+    const getProducts = async () => {
+        const res = await fetch(baseUrl)
         setProducts(await res.json())
     }
 
     const getFeaturedProducts = async (take: number = 0) => {
-        let url = baseUrl
+        let url = `${baseUrl}/featured`
 
         if (take !== 0)
-            url = baseUrl + `?take=${take}`
+            url += `/${take}`
 
         const res = await fetch(url)
         setFeaturedProducts(await res.json())
     }
 
-    const getProduct = async (articleNumber?: string) => {
-        if (articleNumber !== undefined) {
-            const res = await fetch(baseUrl + `/${articleNumber}`)
-            setProduct(await res.json())
-        }
-    }
-
     const getSquare = async (take: number = 0) => {
-        let url = baseUrl
+        let url = `${baseUrl}/square`
 
         if (take !== 0)
-            url = baseUrl + `?take=${take}`
+            url += `/${take}`
 
         const res = await fetch(url)
         setSquare(await res.json())
     }
 
     const getSets = async (take: number = 0) => {
-        let url = baseUrl
+        let url = `${baseUrl}/sets`
 
         if (take !== 0)
-            url = baseUrl + `?take=${take}`
+            url += `/${take}`
 
         const res = await fetch(url)
         setSets(await res.json())

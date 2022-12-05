@@ -15,19 +15,19 @@ import { TabTitle } from '../utilities/GeneralFunctions'
 
 // * sets and define products and square with useContext
 const HomeView: React.FC = () => {
-  const {products, getProducts, square, getSquare, sets, getSets} = useProductContext() as ProductContextType
+  const {featuredProducts, getFeaturedProducts, square, getSquare, sets, getSets} = useProductContext() as ProductContextType
 
   useEffect(() => {
-    getProducts(8)
-  }, [])
+    getFeaturedProducts(8)
+  }, [getFeaturedProducts])
 
   useEffect(() => {
     getSquare(4)
-  }, [])
+  }, [getSquare])
 
   useEffect(() => {
     getSets(4)
-  }, [])
+  }, [getSets])
 
   TabTitle('Fixxo.')
 //   window.top.document.title = 'Fixxo.'
@@ -39,7 +39,7 @@ const HomeView: React.FC = () => {
         <MainMenuSection />
         <ShowcaseSection />
       </header>
-      <ProductGridSection title="Featured Products" products={products} />
+      <ProductGridSection title="Featured Products" products={featuredProducts} />
       <CollabSection />
       <TopPickSection products={square} />
       <FlashSaleSection products={sets} />

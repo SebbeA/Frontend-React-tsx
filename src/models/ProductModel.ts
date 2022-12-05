@@ -9,4 +9,15 @@ export interface IProduct {
     rating?: number
     description?: string
     title?: string
+    tag?: string
+}
+
+export interface ProductItem {
+    articleNumber: string
+    name: string
+    description: string
+    category: string
+    price: number
+    imageName: string
+    tag: string
 }
