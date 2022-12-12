@@ -10,7 +10,7 @@ const NotFoundView: React.FC = () => {
     <>
       <MainMenuSection />
       <div className="container">
-        <div className="container d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center">
           <img src={PageNotFound} alt="404 Page Not Found" style={{ height: "700px", margin: "0 0 4rem 0" }} />
           <h1 className="ms-4" style={{ fontSize: "3rem" }} >The page you were looking for couldn't be found.</h1>
         </div>

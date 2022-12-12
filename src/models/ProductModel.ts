@@ -13,11 +13,14 @@ export interface IProduct {
 }
 
 export interface ProductItem {
+    id?: number
     articleNumber: string
     name: string
     description: string
     category: string
-    price: number
+    price: number | undefined
     imageName: string
     tag: string
+    title?: string
+    rating?: number | undefined
 }

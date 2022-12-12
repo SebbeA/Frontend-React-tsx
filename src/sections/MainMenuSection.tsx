@@ -20,6 +20,7 @@ const MainMenuSection: React.FC = () => {
             <NavLink className="menu-link" to="/categories" end>Categories</NavLink>
             <NavLink className="menu-link" to="/products">Products</NavLink>
             <NavLink className="menu-link" to="/contacts" end>Contacts</NavLink>
+            <NavLink className="menu-link" to="/manage" end>Manage</NavLink>
         </div>
         <div className="menu-icons">
             <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />

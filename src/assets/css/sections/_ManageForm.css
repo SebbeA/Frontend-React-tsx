@@ -1,0 +1,14 @@
+.manage .container {
+    padding-bottom: 40px;
+}
+    .manage .container .form-manage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+        .manage .container .form-manage input {
+            width: 350px;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
