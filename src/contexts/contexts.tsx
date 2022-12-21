@@ -34,7 +34,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
 
     const getProduct = async (articleNumber?: string) => {
         if (articleNumber !== undefined) {
-            const res = await fetch(`${baseUrl}/details/${articleNumber}`)
+            const res = await fetch(`${baseUrl}/product/details/${articleNumber}`)
             setProduct(await res.json())
         }
     }
@@ -73,10 +73,6 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
         const res = await fetch(url)
         setSets(await res.json())
     }
-
-    // useEffect(() => {
-    //     setSets(products.slice(18, 22));
-    //   }, []) 
 
     return <ProductContext.Provider value={{product, products, featuredProducts, square, sets, getProduct, getProducts, getFeaturedProducts, getSquare, getSets}}>
         {children}

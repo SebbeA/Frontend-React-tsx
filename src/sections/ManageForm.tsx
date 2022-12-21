@@ -10,7 +10,7 @@ const ManageForm: React.FC = () => {
           <div className="container">
               <form onSubmit={create} className="form-manage">
                   <h5 className="mb-4">Create product</h5>
-                  <input value={productReq.title} onChange={(e) => setProductReq({...productReq, title: e.target.value})} type="text" className="form-control py-2 mb-3" placeholder="Title"/ >
+                  <input value={productReq.name} onChange={(e) => setProductReq({...productReq, name: e.target.value})} type="text" className="form-control py-2 mb-3" placeholder="Name"/ >
                   <input value={productReq.category} onChange={(e) => setProductReq({...productReq, category: e.target.value})} type="text" className="form-control py-2 mb-3" placeholder="Category"/ >
                   <input value={productReq.description} onChange={(e) => setProductReq({...productReq, description: e.target.value})} type="text" className="form-control py-2 mb-3" placeholder="Description"/ >
                   <input value={productReq.rating || ''} onChange={(e) => setProductReq({...productReq, rating: Number(e.target.value)})} type="number" className="form-control py-2 mb-3" placeholder="Rating"/ >
