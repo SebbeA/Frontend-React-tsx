@@ -15,6 +15,7 @@ const ManageForm: React.FC = () => {
                   <input value={productReq.description} onChange={(e) => setProductReq({...productReq, description: e.target.value})} type="text" className="form-control py-2 mb-3" placeholder="Description"/ >
                   <input value={productReq.rating || ''} onChange={(e) => setProductReq({...productReq, rating: Number(e.target.value)})} type="number" className="form-control py-2 mb-3" placeholder="Rating"/ >
                   <input value={productReq.price || ''} onChange={(e) => setProductReq({...productReq, price: Number(e.target.value)})} type="number" className="form-control py-2 mb-3" placeholder="Price" />
+                  <input value={productReq.imageName} onChange={(e) => setProductReq({...productReq, imageName: (e.target.value)})} type="string" className="form-control py-2 mb-3" placeholder="Image Name" />
                   <button className="btn btn-success py-2 mt-3">Create</button>
               </form>
           </div>

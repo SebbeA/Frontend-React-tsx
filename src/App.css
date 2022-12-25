@@ -11,6 +11,9 @@
 @import "../src/assets/css/cores/_Buttons.css";
 @import "../src/assets/css/cores/_Colors.css";
 
+/** Components */
+@import "../src/assets/css/components/_ProductManageList.css";
+
 /** Sections */
 @import "../src/assets/css/sections/_MainMenuSection.css";
 @import "../src/assets/css/sections/_BreadcrumbSection.css";

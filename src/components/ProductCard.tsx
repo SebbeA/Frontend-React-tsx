@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { IProduct } from '../models/ProductModel';
 
 // * Added prop (product)
 
-interface ProductCardType {
+export interface ProductCardType {
     product: IProduct
 }
 
-const ProductCard: React.FC<ProductCardType> = ({product}) => {
+const ProductCard: React.FC<ProductCardType> = ({ product }) => {
+    const [rating, setRating] = useState(product.rating)
     // * Beginning of a function to add products for wishlist, compare and cart. Copy from Hans in Frontend assignment
     const addToWishList = (e: any) => {
         console.log("added to wish list")
@@ -21,6 +22,10 @@ const ProductCard: React.FC<ProductCardType> = ({product}) => {
     const addToCart = (e: any) => {
         console.log("added to cart")
     }
+
+    useEffect(() => {
+        setRating(product.rating)
+    },[product.rating])
 
     // * Structure for all product cards
   return (
@@ -39,11 +44,15 @@ const ProductCard: React.FC<ProductCardType> = ({product}) => {
                 <p className="card-category">{product.category}</p>
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-rating">
-                    <i className="fa-sharp fa-solid fa-star"></i>
-                    <i className="fa-sharp fa-solid fa-star"></i>
-                    <i className="fa-sharp fa-solid fa-star"></i>
-                    <i className="fa-sharp fa-solid fa-star"></i>
-                    <i className="fa-sharp fa-solid fa-star"></i>
+                {[...Array(5)].map((_star, i) => {
+                    let ratingValue = i + 1;
+                    return (
+                        <i
+                        key={i}
+                        className={`fa-sharp fa-solid fa-star ${ratingValue <= (product.rating || 0) ? 'checked' : ''}`}
+                        />
+                    );
+                })}
                 </p>
                 <p className="card-price">${product.price}</p>
             </div>
@@ -53,3 +62,4 @@ const ProductCard: React.FC<ProductCardType> = ({product}) => {
 }
 
 export default ProductCard
+

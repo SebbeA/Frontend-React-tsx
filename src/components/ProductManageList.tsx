@@ -1,27 +1,29 @@
-import React, { useEffect } from 'react'
-import { IManageContext, manageContext } from '../contexts/manageContext'
-import { ProductItem } from '../models/ProductModel'
+import React, { useEffect } from 'react';
+import { IManageContext, manageContext } from '../contexts/manageContext';
+import { ProductItem } from '../models/ProductModel';
+import ProductCard from './ProductCard';
 
 const ProductManageList = () => {
-    const { products, getAll } = React.useContext(manageContext) as IManageContext
+  const { products, getAll } = React.useContext(manageContext) as IManageContext
 
-    useEffect(() => {
-        getAll()
+  useEffect(() => {
+    getAll()
+  }, [getAll])
 
-    }, [getAll])
-
-    return (
-        <>
-            <h5 className="d-flex justify-content-center align-items-center mb-4">List of Products</h5>
-                {
-                    products.map((product: ProductItem) => (
-                        <div className="mb-3" key={product.id}> 
-                            {product.name} {product.imageName} {product.category} {product.price} 
-                        </div>
-                    ))
-                }
-        </>
-    )
-}
+  return (
+    <>
+      <h5 className="d-flex justify-content-center align-items-center mb-4">
+        List of Products
+      </h5>
+      <div className="product-list container">
+        {
+            products.map((product: ProductItem) => (
+                <ProductCard key={product.id} product={product}/>
+            )) 
+        }
+      </div>
+    </>
+  );
+};
 
 export default ProductManageList
